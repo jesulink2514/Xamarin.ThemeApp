@@ -10,9 +10,11 @@
         
         <Label Text="Opciones"></Label>
 
-        <Picker></Picker>
+        <Picker ItemsSource="{Binding Themes}" TextColor="Black" BackgroundColor="LightGray"
+                SelectedItem="{Binding SelectedTheme}"
+                Title="Elige un tema"></Picker>
         
-        <Button Text="Aplicar"></Button>
+        <Button Text="Aplicar" Style="Primary" Command="{Binding ApplyCommand}"></Button>
         
     </StackLayout>
 
