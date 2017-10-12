@@ -5,7 +5,11 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ThemeApp.Views.MainPage"
              Title="MainPage">
+    <Page.ToolbarItems>
+        <ToolbarItem Icon="Settings.png" Command="{Binding SettingsCommand}"/>
+    </Page.ToolbarItems>
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
     <Label Text="{Binding Title}" />
+    <Button Text="Hello World Button"/>
   </StackLayout>
 </ContentPage>
