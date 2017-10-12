@@ -8,8 +8,19 @@
     <Page.ToolbarItems>
         <ToolbarItem Icon="Settings.png" Command="{Binding SettingsCommand}"/>
     </Page.ToolbarItems>
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-    <Button Text="Hello World Button"/>
-  </StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Button Text="Button Default" />
+        <Button Text="Button Class Default" StyleClass="Default" />
+        <Button Text="Button Class Primary" StyleClass="Primary" />
+        <Button Text="Button Class Success" StyleClass="Success" />
+        <Button Text="Button Class Info" StyleClass="Info" />
+        <Button Text="Button Class Warning" StyleClass="Warning" />
+        <Button Text="Button Class Danger" StyleClass="Danger" />
+        <Button Text="Button Class Link" StyleClass="Link" />
+
+        <Button Text="Button Class Default Small" StyleClass="Small" />
+        <Button Text="Button Class Default Large" StyleClass="Large" />
+        <ProgressBar Progress="0.6"></ProgressBar>
+    </StackLayout>
 </ContentPage>
