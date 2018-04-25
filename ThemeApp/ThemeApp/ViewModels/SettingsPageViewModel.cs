@@ -32,10 +32,10 @@ namespace ThemeApp.ViewModels
             ApplyCommand = new DelegateCommand(Apply);
         }
 
-        private void Apply()
+        private async void Apply()
         {
-            var theme = SelectedTheme == "Dark" ? typeof(DarkThemeResources) : typeof(LightThemeResources);
-            App.Current.Resources.MergedWith = theme;
+            App.ThemeManager.Theme = SelectedTheme;
+            await App.ThemeManager.SaveAsync();
         }
 
 
@@ -46,10 +46,7 @@ namespace ThemeApp.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-
-            var x = typeof(DarkThemeResources);
-            var isDark = Application.Current.Resources.MergedWith == x;
-            SelectedTheme = isDark ? "Dark" : "Light";
+            SelectedTheme = App.ThemeManager.Theme;
         }
     }
 }

@@ -12,9 +12,13 @@ namespace ThemeApp
         {
             InitializeComponent();
 
+            ThemeManager = new ThemeManager();
+
+            ThemeManager.Init();
+
             NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
         }
-
+        public static ThemeManager ThemeManager { get; private set; }
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
